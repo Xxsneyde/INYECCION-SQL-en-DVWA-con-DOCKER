@@ -1,5 +1,5 @@
 # INYECCION-SQL-en-DVWA-con-DOCKER
-— Instalar DVWA en Docker (CachyOS / Arch)
+— Instalar DVWA en Docker
 
 > **DVWA (Damn Vulnerable Web Application)** es una aplicación web intencionalmente vulnerable para practicar pruebas de seguridad web (SQLi, XSS, CSRF, RCE, etc.). Úsala **solo en entornos de laboratorio**.
 
@@ -7,7 +7,7 @@
 
 ## 1) Requisitos previos
 
-- CachyOS/Arch actualizado:
+- CachyOS:
   ```bash
   sudo pacman -Syu
   ```
@@ -30,11 +30,11 @@
   docker run --rm hello-world
   ```
 
-> **Nota de firewall/puertos:** Expondremos DVWA en el puerto `8080`. Si ya está en uso, cambia el mapeo (por ejemplo `9090:80`).
+> **Nota de firewall/puertos:** Expondremos DVWA en el puerto `80`. Si ya está en uso, cambia el mapeo (por ejemplo `:82`).
 
 ---
 
-## 2) Opción A (recomendada, rápida): 1 contenedor
+## 2) Opción: 1 contenedor
 
 Usaremos la imagen `vulnerables/web-dvwa`, que incluye Apache/PHP y MariaDB en el mismo contenedor.
 
